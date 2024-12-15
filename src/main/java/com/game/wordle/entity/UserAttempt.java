@@ -18,7 +18,7 @@ public class UserAttempt {
 
     private String guessedWord;
 
-    private String result;  // Store the result (e.g., GYBBG)
+    private String result;  
 
     private long attemptNumber;
 

@@ -33,7 +33,6 @@ public class GameService {
     @Autowired
     private GameSettingsRepository gameSettingsRepository; 
 
-    // Method to process a guess
     public GuessResponse processGuess(Long userId, String guess) {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new IllegalArgumentException("User not found with ID: " + userId));
@@ -51,7 +50,6 @@ public class GameService {
             return createResponse("You lost! The word of the day is " + dailyWord, null, user);
         }
 
-        // Evaluate the guess
         String result = evaluateGuess(user, guess, dailyWord);
 
         // Check if the user has guessed correctly

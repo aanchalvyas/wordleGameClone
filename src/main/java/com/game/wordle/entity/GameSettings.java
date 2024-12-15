@@ -15,7 +15,7 @@ public class GameSettings {
 
     private String wordOfTheDay;
 
-    private LocalDate date; // Stores the date for which this word is valid
+    private LocalDate date; 
 
     public GameSettings(String wordOfTheDay, LocalDate date) {
         this.wordOfTheDay = wordOfTheDay;

@@ -15,7 +15,6 @@ public class CustomUserDetails implements UserDetails {
     private String password;
     private String role;
 
-    // Constructor to initialize CustomUserDetails with User entity data
     public CustomUserDetails(User user) {
         this.userId = user.getId();
         this.username = user.getUsername();
@@ -29,7 +28,6 @@ public class CustomUserDetails implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        // Returning role as authority. You can modify this if you need roles or permissions.
         return Collections.singletonList(new SimpleGrantedAuthority(role));
     }
 
@@ -45,21 +43,21 @@ public class CustomUserDetails implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return true; // You can modify this to implement account expiration logic
+        return true; 
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return true; // You can modify this to implement account lock logic
+        return true; 
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return true; // You can modify this to implement credentials expiration logic
+        return true; 
     }
 
     @Override
     public boolean isEnabled() {
-        return true; // You can modify this to implement account enabled logic
+        return true; 
     }
 }

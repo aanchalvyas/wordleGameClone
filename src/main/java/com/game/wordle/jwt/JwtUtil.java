@@ -40,7 +40,7 @@ public class JwtUtil {
 
     public boolean validateToken(String token) {
         try {
-            getClaims(token); // If no exception, token is valid
+            getClaims(token);
             return true;
         } catch (Exception e) {
             return false;
